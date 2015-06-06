@@ -2,8 +2,8 @@
 ES6, webpack/babel and workflow
 ===============================
 
-@autho: Jeremy LU
-@date: Jun 06, 2015
+-autho: Jeremy Lu
+-date: Jun 06, 2015
 
 # es6
 	
