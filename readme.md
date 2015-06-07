@@ -2,8 +2,9 @@
 ES6, webpack/babel and workflow
 ===============================
 
--autho: Jeremy Lu
--date: Jun 06, 2015
+Jeremy Lu (jeremy@pubuous.com)
+Jun 06, 2015
+
 
 # es6
 	
@@ -15,7 +16,7 @@ ES6, webpack/babel and workflow
 	
 	- 重要指令
 		
-		- let, const 
+		- let, const //var
 
 		- Arrow Function
 
@@ -28,7 +29,8 @@ ES6, webpack/babel and workflow
 		- Destructuring
 		
 			// example
-			var [a, , b] = [1,2,3];
+			var arr = [1,2,3]; // a=1, b=3
+			var [a, , b] = arr;
 			var {b} = {a:'aa', b:'bb'};
 		
 		- Class
@@ -42,36 +44,40 @@ ES6, webpack/babel and workflow
 			var foo = 'bar'
 			`${foo}`
 
-		- Generator
-			
-			//example
-			function* foo(){
-				yield 'bar';
-			}
-
 		- Promise	
 
 			// example
 			new Promise((resolve, reject) => {
 		        setTimeout(resolve, duration);
 		    })
+		
+		- Generator -> async, await // es7
+			
+			//example
+			function* foo(){
+				yield 'bar';
+			}
+
 
 	# 如何執行 es6
 		
-		# nodejs
+		# nodejs (建議至少 v0.12 或 io.js v2 以上版本)
 
-			- $node --harmony
+			- $node --harmony --harmony-generators
 				
 				- 不可靠
+
 			
 			- babel-node
 
 				$ npm i babel -g
 				
 				- 要取代原本 node 指令
+				- production server
 			
-			- requre('babel/register')
+			- require('babel/register')
 
+				// 6to5 
 				$ npm i --save-dev babel
 
 				- 要多一個 entry.js 來 require() 其它檔案
@@ -130,6 +136,7 @@ ES6, webpack/babel and workflow
 		
 		- npm
 			- node.js 內建的套件管理系統，有十萬筆以上套件可取用，例如 jquery, bootstrap, react 皆包含在內
+			- 特別注意 package.json 內 scripts:{} 內的各種指令
 
 		- gulp
 			- 組建系統(build system)，將專案封裝為可最終輸出的格式，通常包含大量自動化流程

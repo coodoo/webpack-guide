@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"webpack-dev-server",
+    "dev":"webpack -d",
+    "build":"webpack -p",
+    "test": "karma"
   },
   "author": "",
   "license": "ISC",

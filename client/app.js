@@ -4,7 +4,7 @@
 
 
 // 模擬 SPA 程式
-console.log( 'this is a SPA' );
+console.log( 'this is a SPA 23' );
 
 var arr = ['a', 'b'];
 
